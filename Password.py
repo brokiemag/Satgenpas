@@ -10,13 +10,13 @@ password = ''.join(random.choice(string.ascii_uppercase + string.ascii_lowercase
 Write_Output = open("pass.txt", 'w')
 Write_Output.write(password)
 Write_Output.close()
-account_sid="AC28de424e67e90e4ed9d39f76cd13b5c8"
-auth_token="e98f2ccf8c97e1e5f77b60fc8d9db748"
+account_sid="#acc_sid"
+auth_token="#auth_token"
 client = Client(account_sid, auth_token)
 message = client.messages.create(
         body="Your Satellite Generated Password is: "+str(password),
-        from_='+17607481310',
-        to="+917416801085"
+        from_='#phno',
+        to="#urphno"
     )
 with open('pass.txt') as file:
     contents = file.read()
@@ -25,26 +25,6 @@ with open('pass.txt') as file:
         print ('Satellite Generated Password Found')
         sleep(1)
         print ('Redirecting to Authorized page...')
-        os.startfile("C:\\Windows\\addins\\Private")
+        os.startfile("#path")
     else:
         print ('Satellite Generated Password Error')
-
-
-
-# if query in open('pass.csv').read():
-#     print("True")
-# else:
-#     print("False")
-# # import random
-# import string
-
-# # printing lowercase
-# letters = string.ascii_lowercase
-# print ( ''.join(random.choice(letters) for i in range(10)) )
-# input("enter the password:- ")
-# query = input
-
-# if letters in query:
-#     print("Hello World")
-# else:
-#     print("Password incorrect")
